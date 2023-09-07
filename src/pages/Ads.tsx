@@ -1,10 +1,9 @@
 import React from 'react';
+import AdsList from "../components/AdsList";
 
 const Ads:React.FC = () => {
     return (
-        <div>
-
-        </div>
+        <AdsList/>
     );
 };
 

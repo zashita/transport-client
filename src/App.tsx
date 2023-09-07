@@ -1,10 +1,9 @@
+import Ads from "./pages/Ads";
 
 function App() {
 
   return (
-    <>
-      ТАБУРЕТ!!!
-    </>
+    <Ads/>
   )
 }
 
