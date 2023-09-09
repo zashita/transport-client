@@ -1,7 +1,6 @@
 import React from 'react';
 import {IAds} from "../../types/Ads";
 import Location from "/ads-svgs/Локация.svg"
-import '../../styles/AdsListItem.css'
 import Like from '/ads-svgs/Избранное.svg'
 import {
     ButtonGroup,

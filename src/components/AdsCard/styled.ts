@@ -190,6 +190,20 @@ export const ContactButton = styled.div`
   gap: 10px;
   border-radius: 10px;
   background: #3F7BD7;
+  
+  &:hover{
+    border-radius: 10px;
+    background: #E7F0FF;
+    color: #3F7BD7;
+
+    /* Button title */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.09px;
+  }
 `;
 
 export const LikeButton = styled.div`

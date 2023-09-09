@@ -1,9 +1,13 @@
 import React from 'react';
 import AdsList from "../components/AdsList";
+import AdsLayout from "../layouts/AdsLayout";
 
 const Ads:React.FC = () => {
     return (
-        <AdsList/>
+        <AdsLayout>
+            {/*<AdsList/>*/}
+        </AdsLayout>
+
     );
 };
 
