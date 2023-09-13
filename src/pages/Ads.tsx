@@ -5,7 +5,7 @@ import AdsLayout from "../layouts/AdsLayout";
 const Ads:React.FC = () => {
     return (
         <AdsLayout>
-            {/*<AdsList/>*/}
+            <AdsList/>
         </AdsLayout>
 
     );
