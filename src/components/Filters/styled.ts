@@ -4,8 +4,6 @@ export const FiltersContainer = styled.div`
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
-
 `
 export const StyledFilters = styled.div`
   display: flex;

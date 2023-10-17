@@ -14,4 +14,7 @@ export const Title = styled.div`
   line-height: normal;
   letter-spacing: -0.09px;
   display: flex;
+  &:hover{
+    color: var(--gray-text, #8E8E93);
+  }
 `

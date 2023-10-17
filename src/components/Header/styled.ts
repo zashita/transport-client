@@ -1,18 +1,29 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.div`
-  top: 0;
   display: flex;
-  width: 83%;
-  height: 70px;
-  padding: 15px 130px;
+  width: 1340px;
+  padding: 15px 0px;
+  top: 0;
   justify-content: space-between;
   align-items: center;
-  flex-shrink: 0;
-  position: fixed;
-  border-bottom: 1px solid var(--gray-border, #DCDDE0);
+  //flex-shrink: 0;
+  //position: fixed;
   background: var(--white-background, #FFF);
-    `
+
+`
+export const Container = styled.div`
+width: 100%;
+justify-content: center;
+  top: 0;
+
+  display: flex;
+  border-bottom: 1px solid var(--gray-border, #DCDDE0);
+position: fixed;
+  height: 70px;
+
+
+`
 
 export const LogoText = styled.h1`
   color: var(--black-text-icons, #222);

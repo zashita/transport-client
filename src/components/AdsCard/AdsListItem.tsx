@@ -29,6 +29,7 @@ import {
     Zone,
     ZoneText
 } from "./styled";
+import {PriceAndLocation} from "../AdsCardCommon/AdsCardCommon";
 
 
 export interface IAdsItemProps{
@@ -43,7 +44,7 @@ const AdsListItem:React.FC<IAdsItemProps> = ({adsItem}) => {
                     <img src="/Фото.png" alt="fd"/>
                 </Photo>
                 <Info>
-                    <PricesAndZone>
+                    <PriceAndLocation>
                         <Prices>
                             <PriceHour>
                                 {adsItem.priceHour} BYN/час
@@ -59,7 +60,7 @@ const AdsListItem:React.FC<IAdsItemProps> = ({adsItem}) => {
                                 {adsItem.zone}
                             </ZoneText>
                         </Zone>
-                    </PricesAndZone>
+                    </PriceAndLocation>
                     <Chars>
                         <ChipContainer>
                             <Chip>

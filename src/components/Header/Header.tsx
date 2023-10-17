@@ -1,5 +1,5 @@
 import React, {ReactChild, ReactChildren} from 'react';
-import {LogoText, StyledHeader} from "./styled";
+import {Container, LogoText, StyledHeader} from "./styled";
 import HeaderNavigation from "../HeaderNavigation/HeaderNavigation";
 import {NavigationBlock, Title} from "../HeaderNavigation/styled";
 import Profile from "../Profile/Profile";
@@ -10,13 +10,16 @@ export interface IHeaderProps {
 
 const Header:React.FC = () => {
     return (
-        <StyledHeader>
-            <LogoText>
-                LOGO
-            </LogoText>
-            <HeaderNavigation/>
-            <Profile/>
-        </StyledHeader>
+        <Container>
+            <StyledHeader>
+                <LogoText>
+                    LOGO
+                </LogoText>
+                <HeaderNavigation/>
+                <Profile/>
+            </StyledHeader>
+        </Container>
+
     );
 };
 
