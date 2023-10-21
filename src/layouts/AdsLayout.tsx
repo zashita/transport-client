@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import Header from "../components/Header/Header";
 import AdsList from "../components/AdsList";
 import SortSVG from '/sort-svgs/Sorting.svg';
@@ -15,9 +15,8 @@ import {
 } from "./styled";
 
 export interface ILayoutProps{
-    children: React.ReactNode
 }
-const AdsLayout:React.FC<ILayoutProps> = ({children}) => {
+const AdsLayout:React.FC<PropsWithChildren<ILayoutProps>> = ({children}) => {
     return (
         <>
             <Header/>
@@ -27,7 +26,7 @@ const AdsLayout:React.FC<ILayoutProps> = ({children}) => {
                     <TitleNumber>(44)</TitleNumber>
                 </TitleBlock>
                 <SortBlock>
-                    <SortTypeBlock>
+                        <SortTypeBlock>
                         <img src={SortSVG} alt=""/>
                         <SortTypeText>
                             Сначала популярные

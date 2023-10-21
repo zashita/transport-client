@@ -4,7 +4,7 @@ import DriverProfile from "./pages/DriverProfile";
 function App() {
 
   return (
-    <DriverProfile/>
+    <Ads/>
   )
 }
 

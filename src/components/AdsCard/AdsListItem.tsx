@@ -5,45 +5,69 @@ import Like from '/ads-svgs/Избранное.svg'
 import {
     ButtonGroup,
     CardContainer,
-    CharName,
-    Chars,
-    CharsLine,
-    CharValue,
+    SpecName,
+    Specs,
+    SpecLine,
+    SpecValue,
     Chip,
     ChipContainer,
     Comments, CommentsText,
     ContactButton,
     Divider,
     Handling,
-    ImageAndInfo,
-    Info,
+    CardBody,
+    CardText,
     LikeButton,
-    Photo,
+    Image,
     PriceHour,
     PriceKm,
     Prices,
-    PricesAndZone,
+    PriceAndLocation,
     Rating,
-    RatingComments,
+    FeedbackBlock,
     RatingText,
     Zone,
     ZoneText
 } from "./styled";
-import {PriceAndLocation} from "../AdsCardCommon/AdsCardCommon";
 
-
+export enum CardTypes {
+    LIST = 'LIST',
+    GRID = 'GRID'
+}
 export interface IAdsItemProps{
     adsItem: IAds
+    type: CardTypes
 }
 
-const AdsListItem:React.FC<IAdsItemProps> = ({adsItem}) => {
+const AdsListItem:React.FC<IAdsItemProps> = ({adsItem, type}) => {
     return (
-        <CardContainer>
-            <ImageAndInfo>
-                <Photo>
-                    <img src="/Фото.png" alt="fd"/>
-                </Photo>
-                <Info>
+        <CardContainer type = {type}>
+            <CardBody type={type}>
+                <Image type={type}>
+                    {
+                        type === CardTypes.GRID?
+                            <FeedbackBlock>
+                                <Rating>
+                                    <img src="/ads-svgs/Rating.svg" alt=""/>
+                                    <RatingText>
+                                        {adsItem.rating}
+                                    </RatingText>
+                                </Rating>
+                                <Divider/>
+
+                                <Comments>
+                                    <img src="/ads-svgs/Отзыв.svg" alt=""/>
+                                    <CommentsText>
+                                        45
+                                    </CommentsText>
+                                </Comments>
+
+
+                            </FeedbackBlock>:
+                            <div/>
+                    }
+                </Image>
+                <CardText type={type}>
                     <PriceAndLocation>
                         <Prices>
                             <PriceHour>
@@ -61,58 +85,61 @@ const AdsListItem:React.FC<IAdsItemProps> = ({adsItem}) => {
                             </ZoneText>
                         </Zone>
                     </PriceAndLocation>
-                    <Chars>
+                    <Specs>
                         <ChipContainer>
                             <Chip>
                                     Загрузка-разгрузка
                             </Chip>
                         </ChipContainer>
-                        <CharsLine>
-                            <CharName>Тип кузова:</CharName>
-                            <CharValue>{adsItem.cargoType}</CharValue>
-                        </CharsLine>
-                        <CharsLine>
-                            <CharName>Грузоподъёмность:</CharName>
-                            <CharValue>{adsItem.maxWeight} т</CharValue>
-                        </CharsLine>
-                        <CharsLine>
-                            <CharName>Вместимость кузова:</CharName>
-                            <CharValue>{adsItem.capacity} м³</CharValue>
-                        </CharsLine>
+                        <SpecLine>
+                            <SpecName>Тип кузова:</SpecName>
+                            <SpecValue>{adsItem.cargoType}</SpecValue>
+                        </SpecLine>
+                        <SpecLine>
+                            <SpecName>Грузоподъёмность:</SpecName>
+                            <SpecValue>{adsItem.maxWeight} т</SpecValue>
+                        </SpecLine>
+                        <SpecLine>
+                            <SpecName>Вместимость кузова:</SpecName>
+                            <SpecValue>{adsItem.capacity} м³</SpecValue>
+                        </SpecLine>
 
-                    </Chars>
+                    </Specs>
 
-                </Info>
-            </ImageAndInfo>
-            <Handling>
-                <ButtonGroup>
-                    <ContactButton>
-                        Связаться
-                    </ContactButton>
-                    <LikeButton>
-                        <img src={Like} alt=""/>
-                    </LikeButton>
-                </ButtonGroup>
+                </CardText>
+            </CardBody>
+            <>
+                {type === CardTypes.LIST?<Handling>
+                    <ButtonGroup>
+                        <ContactButton>
+                            Связаться
+                        </ContactButton>
+                        <LikeButton>
+                            <img src={Like} alt=""/>
+                        </LikeButton>
+                    </ButtonGroup>
 
-                <RatingComments>
-                    <Rating>
-                        <img src="/ads-svgs/Rating.svg" alt=""/>
-                        <RatingText>
-                            {adsItem.rating}
-                        </RatingText>
-                    </Rating>
-                    <Divider/>
+                    <FeedbackBlock>
+                        <Rating>
+                            <img src="/ads-svgs/Rating.svg" alt=""/>
+                            <RatingText>
+                                {adsItem.rating}
+                            </RatingText>
+                        </Rating>
+                        <Divider/>
 
-                    <Comments>
-                        <img src="/ads-svgs/Отзыв.svg" alt=""/>
-                        <CommentsText>
-                            45
-                        </CommentsText>
-                    </Comments>
+                        <Comments>
+                            <img src="/ads-svgs/Отзыв.svg" alt=""/>
+                            <CommentsText>
+                                45
+                            </CommentsText>
+                        </Comments>
 
 
-                </RatingComments>
-            </Handling>
+                    </FeedbackBlock>
+                </Handling>: <div/>}
+
+            </>
 
         </CardContainer>
     );
