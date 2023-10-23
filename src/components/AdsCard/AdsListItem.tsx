@@ -64,7 +64,7 @@ const AdsListItem:React.FC<IAdsItemProps> = ({adsItem, type}) => {
 
 
                             </FeedbackBlock>:
-                            <div/>
+                            null
                     }
                 </Image>
                 <CardText type={type}>
@@ -137,7 +137,7 @@ const AdsListItem:React.FC<IAdsItemProps> = ({adsItem, type}) => {
 
 
                     </FeedbackBlock>
-                </Handling>: <div/>}
+                </Handling>: null}
 
             </>
 

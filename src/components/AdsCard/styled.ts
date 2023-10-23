@@ -7,13 +7,14 @@ export interface ICardProps {
 // Define reusable components
 export const CardContainer = styled.div<ICardProps>`
   display: flex;
-  width: ${props => props.type === CardTypes.LIST? `1000px`: `320px`};
+  width: ${props => props.type === CardTypes.LIST? 1200: 320} px;
   justify-content: ${props => props.type === CardTypes.LIST? 'space-between': null};
   flex-direction: ${props => props.type === CardTypes.GRID? `column`: null};
   gap: ${props => props.type === CardTypes.GRID? `12px`: null};
   align-items: flex-start;
   flex-shrink: 0;
   margin-bottom: 20px;
+  
 `;
 // export const CardContainer = styled.div`
 //   display: flex;

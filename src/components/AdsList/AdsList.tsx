@@ -18,20 +18,22 @@ export const AdsArray: IAds[] = [
         maxWeight: 12, priceHour: 12, priceKm: 23,
         rating: 4.5, zone: 'Минск, Минская область'},
 ]
-const AdsList:React.FC = () => {
-    const [test, setTest] = useState(true)
+
+export interface IAdsListProps{
+    ViewMode: CardTypes;
+    // setViewMode:  (type: CardTypes) => unknown
+}
+
+const AdsList:React.FC<IAdsListProps> = ({ViewMode}) => {
     return (
-        <div style={{flexDirection: "row"}}>
-        <button
-            onClick={() =>setTest(test === false?true:false)}
-        style={{maxHeight: `30px`}}>
-            ПОМЕНЯТЬ</button>
-        <ListContainer type={test?CardTypes.LIST: CardTypes.GRID}>
+
+        <ListContainer type={ViewMode}>
             {AdsArray.map((item) => (
-                <AdsListItem adsItem = {item} type = {test?CardTypes.LIST: CardTypes.GRID}/>
+                <AdsListItem
+                    adsItem = {item}
+                    type = {ViewMode}/>
             ))}
         </ListContainer>
-        </div>
     );
 };
 

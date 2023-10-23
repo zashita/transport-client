@@ -37,10 +37,11 @@ export const Wrapper = styled.div`
   width: 1340px;
 `
 
-export const ContentBLock = styled.div`
+export const ContentBlock = styled.div`
 display: flex;
   row-gap: 92px;
-  justify-content: space-between;
+  column-gap: 60px;
+  //justify-content: space-between;
 `
 export const SortBlock = styled.div`
   display: flex;
@@ -68,3 +69,9 @@ export const SortTypeText = styled.p`
   font-weight: 430;
   line-height: normal;
   letter-spacing: -0.18px;`
+
+export const ViewModeSwitch = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
