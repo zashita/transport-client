@@ -1,6 +1,5 @@
 import React, {PropsWithChildren} from 'react';
 import Header from "../components/Header/Header";
-import AdsList from "../components/AdsList";
 import SortSVG from '/sort-svgs/Sorting.svg';
 import Filters from "../components/Filters/Filters";
 import {

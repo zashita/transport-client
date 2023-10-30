@@ -117,7 +117,7 @@ export const Zone = styled.div`
 `;
 
 export const ZoneText = styled.div`
-  color: #3F7BD7;
+  color: ${props => props.theme.colors.accent};
   font-family: Inter;
   font-size: 13px;
   font-style: normal;
@@ -193,7 +193,7 @@ export const ButtonGroup = styled.div`
   gap: 8px;
 `;
 
-export const ContactButton = styled.div`
+export const ContactButton = styled.button`
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
@@ -202,26 +202,18 @@ export const ContactButton = styled.div`
   letter-spacing: -0.09px;
   color: white;
   display: flex;
-  height: 22px;
+  height: 40px;
   padding: 10px 30px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   border-radius: 10px;
-  background: #3F7BD7;
-  
-  &:hover{
-    border-radius: 10px;
-    background: #E7F0FF;
-    color: #3F7BD7;
+  background: ${props => props.theme.colors.accent};
+  border: 0;
 
-    /* Button title */
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: -0.09px;
+  &:hover {
+    background: #d6bcff;
+    color: ${props => props.theme.colors.accent};
   }
 `;
 

@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {IAds} from "../types/Ads";
+import React from 'react';
 import AdsListItem, {CardTypes} from "../AdsCard/AdsListItem";
 import {ListContainer} from "./styled";
+import {IAds} from "../../types/Ads";
 
 
 export const AdsArray: IAds[] = [

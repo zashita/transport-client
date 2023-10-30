@@ -5,8 +5,8 @@ export const NavigationBlock = styled.div`
   align-items: flex-start;
   gap: 40px;
     `
-export const Title = styled.div`
-
+export const Title = styled.p`
+  color: ${props => props.theme.colors.lightText};
   font-family: Inter;
   font-size: 14px;
   font-style: normal;

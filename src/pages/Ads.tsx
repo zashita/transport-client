@@ -4,7 +4,7 @@ import AdsLayout from "../layouts/AdsLayout";
 import {CardTypes} from "../components/AdsCard/AdsListItem";
 
 const Ads:React.FC = () => {
-    const [mode, setMode] = useState<CardTypes>(CardTypes.GRID)
+    const [mode, setMode] = useState<CardTypes>(CardTypes.LIST)
     return (
         <AdsLayout
             ViewMode = {mode}

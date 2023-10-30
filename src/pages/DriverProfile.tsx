@@ -1,7 +1,6 @@
 import React from 'react';
 import ProfileLayout from "../layouts/ProfileLayout";
-import DriverCard from "../components/DriverProfile/DriverProfile";
-import {Tabs} from "../components/ProfileButtons/styled";
+import DriverCard from "../components/DriverInfo/DriverInfo";
 import ProfileButtons from "../components/ProfileButtons/ProfileButtons";
 
 const DriverProfile: React.FC = () => {

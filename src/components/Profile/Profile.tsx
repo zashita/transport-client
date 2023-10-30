@@ -10,19 +10,19 @@ export enum DropdownModes {
 
 export const ProfileDDRows: Array<IRow> = [
     {
-        name: 'Test',
+        name: 'Профиль',
         onClick: () => null
     },
     {
-        name: 'Test',
+        name: 'Избранное',
         onClick: () => null
     },
     {
-        name: 'Test',
+        name: 'Настройки',
         onClick: () => null
     },
     {
-        name: 'Test',
+        name: 'Выход',
         onClick: () => null
     },
 ]

@@ -1,8 +1,9 @@
-import React, {ReactChild, ReactChildren} from 'react';
+import React from 'react';
 import {Container, LogoText, StyledHeader} from "./styled";
 import HeaderNavigation from "../HeaderNavigation/HeaderNavigation";
-import {NavigationBlock, Title} from "../HeaderNavigation/styled";
 import Profile from "../Profile/Profile";
+import {Link} from "react-router-dom";
+import {Routes} from "../../routes/routes";
 
 export interface IHeaderProps {
     children: React.ReactNode;
@@ -12,9 +13,14 @@ const Header:React.FC = () => {
     return (
         <Container>
             <StyledHeader>
-                <LogoText>
-                    LOGO
-                </LogoText>
+                <Link
+                    to = {Routes.MAIN}
+                    style = {{textDecoration: `none`}}
+                >
+                    <LogoText>
+                        LOGO
+                    </LogoText>
+                </Link>
                 <HeaderNavigation/>
                 <Profile/>
             </StyledHeader>

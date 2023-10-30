@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    ButtonContainer,
     CommentText,
     Divider,
     Ellipse, MessageButton,
@@ -15,12 +16,13 @@ import {
 import RatingSVG from '../../../public/driverprofileimages/ICON_Rating.svg'
 import Driver from '../../../public/driverprofileimages/Profile pic.png'
 import CommentSVG from '../../../public/driverprofileimages/ICON_Comment.svg'
+import {ButtonGroup} from "../AdsCard/styled";
 
 export const driver = {
 
 }
 
-const DriverProfile = () => {
+const DriverInfo:React.FC = () => {
     return (
         <ProfileContainer>
             <ProfileImage>
@@ -58,11 +60,13 @@ const DriverProfile = () => {
                     </RatingBlock>
                 </ProfileText>
             </ProfileInfo>
-            <MessageButton>
-                Написать сообщение
-            </MessageButton>
+            <ButtonContainer>
+                <MessageButton>
+                    Написать сообщение
+                </MessageButton>
+            </ButtonContainer>
         </ProfileContainer>
     );
 };
 
-export default DriverProfile;
+export default DriverInfo;

@@ -9,24 +9,26 @@ export const StyledHeader = styled.div`
   align-items: center;
   //flex-shrink: 0;
   //position: fixed;
-  background: var(--white-background, #FFF);
+  
 
 `
 export const Container = styled.div`
-width: 100%;
-justify-content: center;
+  width: 100%;
+  justify-content: center;
   top: 0;
-
+  left: 0;
+  right: 0;
   display: flex;
-  border-bottom: 1px solid var(--gray-border, #DCDDE0);
-position: fixed;
+  //border-bottom: 1px solid var(--gray-border, #DCDDE0);
+  position: fixed;
   height: 70px;
+  background: ${props => props.theme.colors.darkBg};
 
 
 `
 
 export const LogoText = styled.h1`
-  color: var(--black-text-icons, #222);
+  color: ${props => props.theme.colors.lightText};
   leading-trim: both;
   text-edge: cap;
   font-family: Lexend Peta;

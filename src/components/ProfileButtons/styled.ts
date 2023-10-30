@@ -12,10 +12,11 @@ export const TabButton = styled.button`
   padding: 10px 40px;
   justify-content: center;
   align-items: center;
+  border: 0;
   gap: 10px;
   border-radius: 8px;
-  background: var(--colot-accent-100, #3F7BD7);
-  color: var(--Background---white, #FFF);
+  background: ${props => props.theme.colors.accent};
+  color: ${props => props.theme.colors.lightText};
 
   /* Title */
   font-family: Inter;

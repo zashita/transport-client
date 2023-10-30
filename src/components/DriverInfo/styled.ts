@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
-  display: flex;
+  display: grid;
   width: 1340px;
   padding-bottom: 0px;
-  justify-content: space-between;
+  //justify-content: space-between;
   align-items: flex-start;
+  grid-template-columns: 175px 275px auto;
+`
+export const ButtonContainer = styled.div`
+    display: flex;
+    justify-content: right;
 `
 export const ProfileInfo = styled.div`
   display: flex;
@@ -16,7 +21,7 @@ export const ProfileImage = styled.div`
   display: flex;
   width: 150px;
   height: 150px;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -108,7 +113,9 @@ export const MessageButton = styled.button`
   align-items: center;
   gap: 10px;
   border-radius: 8px;
-  background: var(--colot-accent-100, #3F7BD7);`
+  border: 0;
+  background: ${props => props.theme.colors.accent};
+  color: ${props => props.theme.colors.lightText} `
 
 export const CommentText = styled.p`
   color: var(--gray-text, #8E8E93);

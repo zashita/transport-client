@@ -1,5 +1,5 @@
-import styled, {keyframes} from "styled-components";
-import dropdown, {IDropdownProps} from "./Dropdown";
+import styled from "styled-components";
+import  {IDropdownProps} from "./Dropdown";
 import {DropdownModes} from "../Profile/Profile";
 
 export const DropdownContainer = styled.div<IDropdownProps>`
