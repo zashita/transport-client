@@ -29,6 +29,7 @@ import {
     Zone,
     ZoneText
 } from "./styled";
+import {router, Routes} from "../../routes/routes";
 
 export enum CardTypes {
     LIST = 'LIST',
@@ -42,7 +43,7 @@ export interface IAdsItemProps{
 const AdsListItem:React.FC<IAdsItemProps> = ({adsItem, type}) => {
     return (
         <CardContainer type = {type}>
-            <CardBody type={type}>
+            <CardBody type={type} onClick={() => router.navigate(Routes.ADSINFO)}>
                 <Image type={type}>
                     {
                         type === CardTypes.GRID?

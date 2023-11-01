@@ -16,7 +16,6 @@ import {
 import RatingSVG from '../../../public/driverprofileimages/ICON_Rating.svg'
 import Driver from '../../../public/driverprofileimages/Profile pic.png'
 import CommentSVG from '../../../public/driverprofileimages/ICON_Comment.svg'
-import {ButtonGroup} from "../AdsCard/styled";
 
 export const driver = {
 

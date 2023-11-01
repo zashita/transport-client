@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import DriverProfile from "../pages/DriverProfile";
 import LogIn from "../pages/LogIn";
+import AdsFullInfo from "../pages/AdsFullInfo";
 
 export interface IRoute{
     path: string;
@@ -17,12 +18,14 @@ export enum Routes {
     MAIN = `/`,
     ADS = `/ads`,
     DRIVERS = `/driver`,
-    LOGIN = '/login'
+    LOGIN = '/login',
+    ADSINFO = `/adsinfo`
 }
 
 export const router = createBrowserRouter([
     {path: Routes.MAIN, element: <Main/>},
     {path: Routes.ADS, element: <Ads/>},
     {path: Routes.DRIVERS, element: <DriverProfile/>},
-    {path: Routes.LOGIN, element: <LogIn/>}
+    {path: Routes.LOGIN, element: <LogIn/>},
+    {path: Routes.ADSINFO, element: <AdsFullInfo/>}
 ])

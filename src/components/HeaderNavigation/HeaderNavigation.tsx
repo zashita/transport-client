@@ -8,14 +8,6 @@ const HeaderNavigation:React.FC = () => {
         <NavigationBlock>
 
             <Link
-                to ={Routes.DRIVERS}
-                style = {{textDecoration: `none`}}
-            >
-                <Title>
-                    Водители
-                </Title>
-            </Link>
-            <Link
                 to = {Routes.ADS}
                 style = {{textDecoration: `none`}}
             >
